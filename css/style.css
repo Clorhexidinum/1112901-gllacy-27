@@ -23,12 +23,71 @@ body{
   overflow: hidden;
 }
 
+.form{
+  background-color: #f8f7f4;
+  border-radius: 6px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.field{
+  padding: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(211, 211, 210);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: #999999;
+  box-sizing: border-box;
+}
+
+.button {
+  background: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  padding: 13px 20px;
+}
+
+.button:hover,
+.button:focus{
+  background: linear-gradient( 90deg, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
+}
+
+.button:active{
+  background: linear-gradient( 90deg, rgb(225,97,62) 0%, rgb(199,63,44) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
 
 /* Header*/
 
+.header{
+  margin: 0px 27px;
+}
+
+.header--nav{
+  display: flex;
+  position: relative;
+  padding: 9px 0px;
+  z-index: 1;
+}
 
 .header--nav__menu{
   list-style: none;
+  display: flex;
+  min-width: 368px;
+  padding-left: 12px;
+  margin-top: 17px;
+}
+
+.header--nav__catalog__item{
+padding-right: 10px;
 }
 
 .header--nav__catalog__button{
@@ -37,6 +96,7 @@ body{
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
+  padding: 10px;
 }
 
 .header--nav__catalog__button:hover,
@@ -54,14 +114,48 @@ body{
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
 
-.catalog-list{
+.header--nav__buttons-list{
+  display: flex;
+  margin: 0px;
+  padding-top: 5px;
+  list-style: none;
+  margin-left: auto;
+}
+
+.header--nav__buttons-link{
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.header--nav__catalog-list{
+  width: 143px;
+  padding: 0px;
+}
+
+.header--nav__catalog-list{
   list-style: none;
   background-color: #fff;
-
+  padding: 0px;
   display: none;
 }
 
-.header--nav__catalog-item{
+.header--nav__catalog-item:hover,
+.header--nav__catalog--item:focus{
+  background-color: #fbded7;
+}
+
+.header--nav__catalog--item:active{
+  background-color: #f6b5a5
+}
+
+.header--nav__catalog-link{
   text-decoration: none;
   color: #323232;
   font-size: 14px;
@@ -72,19 +166,11 @@ body{
   font-weight: bold;
 }
 
-.header--nav__catalog-item:hover,
-.header--nav__catalog-item:focus{
-  background-color: rgb(251, 222, 215);
-}
-
-.header--nav__catalog-item:active{
-  background-color: rgb(246, 181, 165);
-}
-
 .header--nav__buttons-list{
   list-style: none;
   font-size: 14px;
   line-height: 16px;
+  display: flex;
 }
 
 .header--nav__buttons-link{
@@ -92,19 +178,14 @@ body{
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
+  fill: #fff;
 }
 
 .header--nav__buttons-link:hover,
 .header--nav__buttons-link:focus{
   background-color: #fff;
   color: #323232;
-}
-
-.form{
-  background-color: #f8f7f4;
-  border-radius: 6px;
-  background-color: rgb(248, 247, 244);
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  fill: #323232;
 }
 
 .form{
@@ -113,35 +194,6 @@ body{
 
 .sign_in--form_item{
   list-style: none;
-}
-
-.field {
-  border: 1px solid rgb(211, 211, 210);
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-}
-
-.button {
-  background: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  border: none;
-}
-
-.button:hover,
-.button:focus{
-  background: linear-gradient( 90deg, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
-}
-
-.button:active{
-  background: linear-gradient( 90deg, rgb(225,97,62) 0%, rgb(199,63,44) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
 .sign_in--form__block-button{
@@ -157,8 +209,11 @@ body{
   color: #e84d37;
 }
 
-.header--nav__buttons-icon:hover{
-  fill: red;
+.header--nav__info{
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  text-align: right;
 }
 
 .header--nav__info-time{
@@ -181,6 +236,7 @@ body{
 
 .slider--list{
   list-style: none;
+  text-align: center;
 }
 
 .slider--header{
@@ -193,10 +249,12 @@ body{
   font-size: 32px;
   line-height: 44px;
   font-weight: bold;
+  border-radius: 50px;
 }
 
 .slider--nav__list{
   list-style: none;
+  display: flex;
 }
 
 .slider--nav__button{
@@ -218,6 +276,11 @@ body{
 
 
 /* Banner */
+
+
+.baner{
+  display: flex;
+}
 
 .baner--item{
   width: 560px;
@@ -254,13 +317,28 @@ body{
 
 .goods--list{
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.goods--item{
+  position: relative;
+  width: 267px;
+  margin-right: 26px;
+  text-align: center;
+}
+
+.goods--item:last-child{
+  margin-right: 0px;
 }
 
 .hits::before{
   background-image: url(../img/hit.svg);
   content: " ";
   float: left;
-  position: relative;
+  position: absolute;
   height: 61px;
   width: 61px;
 }
@@ -319,9 +397,55 @@ body{
   line-height: 30px;
 }
 
+.seo-list{
+  columns: 2 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.production::before{
+  background-image: url(../img/production.png);
+  content: " ";
+  float: left;
+  height: 49px;
+  width: 49px;
+}
+
+.ingredients::before{
+  background-image: url(../img/ingredients.png);
+  content: " ";
+  float: left;
+  height: 49px;
+  width: 49px;
+}
+
+.suppliers::before{
+  background-image: url(../img/suppliers.png);
+  content: " ";
+  float: left;
+  height: 49px;
+  width: 49px;
+}
+
+.thermometer::before{
+  background-image: url(../img/Thermometer.png);
+  content: " ";
+  float: left;
+  height: 49px;
+  width: 49px;
+}
 
 /* news-distribution */
 
+
+.news-distribution{
+  display: flex;
+}
+
+.news-distribution__block{
+  width: 560px;
+  min-height: 230px;
+}
 
 .news{
   background-image: url(../img/strawberry.png);
@@ -354,12 +478,20 @@ body{
 /* Map */
 
 
+.map{
+  position: relative;
+  height: 430px;
+}
+
 .map--form{
   color: #363636;
   border-radius: 15px;
   width: 300px;
   min-height: 305px;
   background-color: rgba(255, 255, 255, 0.98);
+  position: absolute;
+  top: 62px;
+  right: 27px;
 }
 
 .phone{
@@ -383,8 +515,18 @@ body{
 /* Footer */
 
 
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer--social_network{
   list-style: none;
+  display: flex;
+}
+
+.footer--social_network-list{
+  margin-right: 5px;
 }
 
 .footer--social_network-img{
@@ -411,13 +553,13 @@ body{
 }
 
 .footer--menu::before{
-    background-image: url(../img/heart.svg);
-    content: " ";
-    float: left;
-    position: relative;
-    top: 2px;
-    height: 13px;
-    width: 15px;
+  background-image: url(../img/heart.svg);
+  content: " ";
+  float: left;
+  position: relative;
+  top: 2px;
+  height: 13px;
+  width: 15px;
 }
 
 .footer--item__link{
@@ -483,6 +625,7 @@ body{
 
 .breadcrumbs--list{
   list-style: none;
+  display: flex;
 }
 
 .breadcrumbs--item-link{
@@ -562,6 +705,7 @@ body{
 
 .padination--list{
   list-style: none;
+  display: flex;
 }
 
 .padination--item__link{
@@ -570,6 +714,7 @@ body{
   color: #fff;
   background: none;
   border: none;
+  padding: 10px;
 }
 
 .padination--item__link:hover,
@@ -582,38 +727,4 @@ body{
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   color: #323232;
-}
-
-
-
-.production::before{
-  background-image: url(../img/production.png);
-  content: " ";
-  float: left;
-  height: 49px;
-  width: 49px;
-}
-
-.ingredients::before{
-  background-image: url(../img/ingredients.png);
-  content: " ";
-  float: left;
-  height: 49px;
-  width: 49px;
-}
-
-.suppliers::before{
-  background-image: url(../img/suppliers.png);
-  content: " ";
-  float: left;
-  height: 49px;
-  width: 49px;
-}
-
-.thermometer::before{
-  background-image: url(../img/Thermometer.png);
-  content: " ";
-  float: left;
-  height: 49px;
-  width: 49px;
 }
