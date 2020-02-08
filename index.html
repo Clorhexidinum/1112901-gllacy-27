@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="StyleSheet" href="style.css" type="text/css">
+  <link rel="StyleSheet" href="css/normalize.css" type="text/css">
+  <link rel="StyleSheet" href="css/style.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <title>Gllacy</title>
 </head>
@@ -16,7 +17,7 @@
       </a>
       <ul class="header--nav__menu">
        <li class="header--nav__catalog__item"><a href="catalog.html" class="header--nav__catalog__button">Каталог</a>
-         <ul class="catalog-list">
+         <ul class="catalog-list form">
            <li class="header--nav__catalog-list"><a href="#" class="header--nav__catalog-item novelties">Новинки</a></li>
            <li class="header--nav__catalog-list"><a href="catalog.html" class="header--nav__catalog-item">Сливочные</a></li>
            <li class="header--nav__catalog-list"><a href="#" class="header--nav__catalog-item">Щербеты</a></li>
@@ -28,32 +29,40 @@
        <li class="header--nav__catalog__item"><a href="" class="header--nav__catalog__button">О Компании</a></li>
       </ul>
       <ul class="header--nav__buttons-list">
-        <li class="header--nav__buttons-item"><a href="" class="header--nav__buttons-link"><svg class="header--nav__buttons-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg></a>
-          <form class="search--form" action="index.html" method="post">
-            <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-            <input type="text" name="seach" id="site-search" placeholder="Что ищем?" class="search--field field">
+        <li class="header--nav__buttons-item"><a href="" class="header--nav__buttons-link"><svg class="header--nav__buttons-icon" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg></a>
+          <form class="search--form form" action="index.html" method="post">
+            <label class="visually-hiden" for="site-search">Поиск по сайту</label>
+            <input type="search" name="seach" id="site-search" placeholder="Что ищем?" class="search--field field">
           </form>
         </li>
-        <li class="header--nav__buttons-item"><a href="" class="header--nav__buttons-link"><svg class="header--nav__buttons-icon" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve"><polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/><path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/></g></svg><span>Вход</span></a>
-          <form class="sign_in--form" action="index.html" method="post">
-            <label class="visually-hidden" for="sign_in--email">Электронная почта</label>
-            <input type="email" name="email" id="sign_in--email" placeholder="Электронная почта" class="sign_in--form__field field">
-            <label class="visually-hidden" for="sign_in--password">Электронная почта</label>
-            <input type="password" name="password" id="sign_in--password" placeholder="Пароль" class="sign_in--form__field password field">
-            <div class="sign_in--buttons-block">
-              <button type="submit" name="sign_in" class="sign_in--form__button button">Вход</button>
-              <div class="sign_in--form__block">
-                <a href="" class="sign_in--form__block-button">Забыли пароль?</a>
-                <a href="" class="sign_in--form__block-button">Новая регистрация</a>
-              </div>
-            </div>
+        <li class="header--nav__buttons-item"><a href="" class="header--nav__buttons-link"><svg class="header--nav__buttons-icon" width="21" height="19" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve"><polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/><path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/></svg><span>Вход</span></a>
+          <form class="sign_in--form form" action="index.html" method="post">
+            <ul>
+              <li class="sign_in--form_item">
+                <label class="visually-hiden" for="sign_in--email">Электронная почта</label>
+                <input type="email" name="email" id="sign_in--email" placeholder="Электронная почта" class="sign_in--form__field field">
+              </li>
+              <li class="sign_in--form_item">
+                <label class="visually-hiden" for="sign_in--password">Пароль</label>
+                <input type="password" name="password" id="sign_in--password" placeholder="Пароль" class="sign_in--form__field password field">
+              </li>
+              <li class="sign_in--form_item">
+                <div class="sign_in--buttons-block">
+                  <button type="submit" name="sign_in" class="sign_in--form__button button">Вход</button>
+                  <div class="sign_in--form__block">
+                    <a href="" class="sign_in--form__block-button">Забыли пароль?</a>
+                    <a href="" class="sign_in--form__block-button">Новая регистрация</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </form>
         </li>
-        <li class="header--nav__buttons-item"><a href="" class="header--nav__buttons-link"><svg class="header--nav__buttons-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg><span>Пусто</span></a></li>
+        <li class="header--nav__buttons-item"><a href="" class="header--nav__buttons-link"><svg class="header--nav__buttons-icon" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg><span>Пусто</span></a></li>
        </ul>
       <div class="header--nav__info">
         <p class="header--nav__info-time">С 10 до 20, ежедневно</p>
-        <a href="tel:88124502525" class="header--nav__info-phone">8 812 450-25-25</a>
+        <a href="tel:88124502525" class="header--nav__info-phone tel">8 812 450-25-25</a>
       </div>
     </nav>
   </header>
@@ -63,37 +72,37 @@
       <ul class="slider--list">
         <li class="slider--item">
           <div class="slider--slide">
-            <img src="img/icecream1.png" alt="Мороженое крем-брюле с малиновым джемом" class="slider--photo" width="1045px" height="881px">
+            <img src="img/icecream1.png" alt="Мороженое крем-брюле с малиновым джемом" class="slider--photo" width="1045" height="881">
             <div class="slider-container">
               <h2 class="slider--header">Крем-брюле и пломбир<br> с малиновым джемом</h2>
-              <a href="" class="slider--button">Давайте оба!</a>
+              <a href="" class="slider--button button">Давайте оба!</a>
             </div>
           </div>
         </li>
         <li class="slider--item">
           <div class="slider--slide">
-            <img src="img/icecream2.png" alt="Мороженое шоколадный пломбир и лимонный сорбет" class="slider--photo" width="1045px" height="881px">
+            <img src="img/icecream2.png" alt="Мороженое шоколадный пломбир и лимонный сорбет" class="slider--photo" width="1045" height="881">
             <div class="slider-container">
               <h2 class="slider--header">Шоколадный пломбир и лимонный сорбет</h2>
-              <a href="" class="slider--button">Давайте оба!</a>
+              <a href="" class="slider--button button">Давайте оба!</a>
             </div>
           </div>
         </li>
         <li class="slider--item">
           <div class="slider--slide">
-            <img src="img/icecream3.png" alt="Мороженое пломбир с помадкой и клубничный щербет" class="slider--photo" width="1045px" height="881px">
+            <img src="img/icecream3.png" alt="Мороженое пломбир с помадкой и клубничный щербет" class="slider--photo" width="1045" height="881">
             <div class="slider-container">
               <h2 class="slider--header">Пломбир с помадкой и клубничный щербет</h2>
-              <a href="" class="slider--button">Давайте оба!</a>
+              <a href="" class="slider--button button">Давайте оба!</a>
             </div>
           </div>
         </li>
         </ul>
       <div class="slider--nav">
-        <ul class="slider--nav--list">
-          <li class="slider--nav--item"><button></button></li>
-          <li class="slider--nav--item"><button></button></li>
-          <li class="slider--nav--item"><button></button></li>
+        <ul class="slider--nav__list">
+          <li class="slider--nav__item"><button type="button" class="slider--nav__button"></button></li>
+          <li class="slider--nav__item"><button type="button" class="slider--nav__button"></button></li>
+          <li class="slider--nav__item"><button type="button" class="slider--nav__button"></button></li>
         </ul>
       </div>
     </section>
@@ -113,32 +122,37 @@
       <section class="goods">
       <h2 class="visually-hiden">Наши товары</h2>
       <ul class="goods--list">
-        <li class="goods--item">
-          <img src="img/goods/orange.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="product__card--img" width="267px" height="267px">
+        <li class="goods--item hits">
+          <img src="img/goods/orange.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="product__card--img" width="267" height="267">
           <div class="product__card--price-container">
             <p class="product__card--price">310 ₽<span class="product__card--price-kilo">/кг</span></p>
             <h4 class="product__card--description"><a href="" class="product__card--header">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h4>
           </div>
+          <a class="goods--item__button button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods--item">
-          <img src="img/goods/coffee.png" alt="Сливочно-кофейное с кусочками шоколада" class="product__card--img" width="267px" height="267px">
+        <li class="goods--item hits">
+          <img src="img/goods/coffee.png" alt="Сливочно-кофейное с кусочками шоколада" class="product__card--img" width="267" height="267">
           <div class="product__card--price-container">
             <p class="product__card--price">380 ₽<span class="product__card--price-kilo">/кг</span></p>
             <h4 class="product__card--description"><a href="" class="product__card--header">Сливочно-кофейное с кусочками шоколада</a></h4>
           </div>
+          <a class="goods--item__button button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods--item">
-          <img src="img/goods/strawberry.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="product__card--img" width="267px" height="267px">
+        <li class="goods--item hits">
+          <img src="img/goods/strawberry.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="product__card--img" width="267" height="267">
           <div class="product__card--price-container">
             <p class="product__card--price">355 ₽<span class="product__card--price-kilo">/кг</span></p>
             <h4 class="product__card--description"><a href="" class="product__card--header">Сливочно-клубничное с присыпкой из белого шоколада</a></h4>
           </div>
+          <a class="goods--item__button button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="goods--item">
-          <img src="img/goods/creme.png" alt="Сливочное крем-брюле с карамельной подливкой" class="product__card--img" width="267px" height="267px">
+        <li class="goods--item hits">
+          <img src="img/goods/creme.png" alt="Сливочное крем-брюле с карамельной подливкой" class="product__card--img" width="267" height="267">
           <div class="product__card--price-container">
             <p class="product__card--price">415 ₽<span class="product__card--price-kilo">/кг</span></p>
             <h4 class="product__card--description"><a href="" class="product__card--header">Сливочное крем-брюле с карамельной подливкой</a></h4>
+          </div>
+          <a class="goods--item__button button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
     </section>
@@ -146,10 +160,10 @@
       <h2 class="visually-hiden">Наши преимущества</h2>
       <h3 class="seo--header">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
       <ul class="seo-list">
-        <li class="seo-item"><img src="img/Мороженко.png" alt="Собственное производство" width="49px" height="49px"class="seo-item__img">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-        <li class="seo-item"><img src="img/Листик.png" alt="Натуральные игнгридиенты" width="49px" height="49px"class="seo-item__img">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-        <li class="seo-item"><img src="img/Корова.png" alt="Проверенные поставщики" width="49px" height="49px"class="seo-item__img">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-        <li class="seo-item"><img src="img/Градусник.png" alt="Правильное хранение" width="49px" height="49px"class="seo-item__img">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+        <li class="seo-item"><img src="img/Мороженко.png" alt="Собственное производство" width="49" height="49" class="seo-item__img">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+        <li class="seo-item"><img src="img/Листик.png" alt="Натуральные игнгридиенты" width="49" height="49" class="seo-item__img">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+        <li class="seo-item"><img src="img/Корова.png" alt="Проверенные поставщики" width="49" height="49" class="seo-item__img">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+        <li class="seo-item"><img src="img/Градусник.png" alt="Правильное хранение" width="49" height="49" class="seo-item__img">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
       </ul>
     </section>
     <section class="news-distribution">
@@ -168,46 +182,56 @@
     </section>
     <section class="map">
       <h2 class="visually-hiden">Как нас найти</h2>
-      <img src="img/Layer3.jpg" alt="Большая Конюшенная 19/8, Санкт-Петербург" width="1200px" height="430px">
+      <img src="img/Layer3.jpg" alt="Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
       <div class="map--form">
         <p class="map--form-paragrapf">Адрес главного офиса и офлайн-магазина:</p>
         <p class="map--form-paragrapf-bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
         <p class="map--form-paragrapf phone">Для заказов по телефону:</p>
-        <a href="tel:88124502525" class="map--form-paragrapf-bold">8 812 450-25-25</a>
+        <a href="tel:88124502525" class="map--form-paragrapf-bold tel">8 812 450-25-25</a>
         <p class="map--form-paragrapf">(с 10 до 20 ежедневно)</p>
         <button type="button" name="map_button" class="map--form__button button">Форма обратной связи</button>
       </div>
     </section>
-    <section class="popup">
-      <form class="popup--form" action="index.html" method="post">
-        <h2 class="popup--header">Мы обязательно вам ответим!</h2>
-        <label class="visually-hidden" for="popup-name">Как вас зовут?</label>
-        <input type="text" name="name" id="popup-name" placeholder="Как вас зовут?" class="popup--field field">
-        <label class="visually-hidden" for="popup-email">Ваша почта для ответа?</label>
-        <input type="email" name="email" id="popup-email" placeholder="Ваша почта для ответа?" class="popup--field field">
-        <label class="visually-hidden" for="popup-message">Ваша почта для ответа?</label>
-        <textarea name="comment" rows="8" cols="80" id="popup-message" placeholder="Напишите что-нибудь..." class="popup--field field"></textarea>
-        <button name="submit" value="Отправить" class="popup--button button">Отправить</button>
+    <div class="popup">
+      <form class="popup--form form" action="index.html" method="post">
+        <fieldset class="popup">
+          <legend class="popup--header">Мы обязательно вам ответим!</legend>
+          <ul class="popup--form_list">
+            <li class="popup--form_item">
+              <label class="visually-hiden" for="popup-name">Как вас зовут?</label>
+              <input type="text" name="name" id="popup-name" placeholder="Как вас зовут?" class="popup--field field">
+            </li>
+            <li class="popup--form_item">
+              <label class="visually-hiden" for="popup-email">Ваша почта для ответа?</label>
+              <input type="email" name="email" id="popup-email" placeholder="Ваша почта для ответа?" class="popup--field field">
+            </li>
+            <li class="popup--form_item">
+              <label class="visually-hiden" for="popup-message">Напишите что-нибудь...</label>
+              <textarea name="comment" rows="8" cols="80" id="popup-message" placeholder="Напишите что-нибудь..." class="popup--field field"></textarea>
+            </li>
+            <li class="popup--form_item">
+              <button name="submit" value="Отправить" class="popup--button button" type="button">Отправить</button>
+            </li>
+          </ul>
+        </fieldset>
       </form>
-    </section>
+    </div>
    </main>
   <footer class="footer">
     <ul class="footer--social_network">
-      <li class="footer--social_network-list"><a href="#"><img src="img/twitter.svg" alt="Твиттер" width="32px" height="32px"></a></li>
-      <li class="footer--social_network-list"><a href="#"><img src="img/instagram.svg" alt="Инстаграм" width="32px" height="32px"></a></li>
-      <li class="footer--social_network-list"><a href="#"><img src="img/fb.svg" alt="Фейскбук" width="32px" height="32px"></a></li>
-      <li class="footer--social_network-list"><a href="#"><img src="img/vk.svg" alt="Вконтакте" width="32px" height="32px"></a></li>
+      <li class="footer--social_network-list"><a href="#"><img class="footer--social_network-img" src="img/twitter.svg" alt="Твиттер" width="32" height="32"></a></li>
+      <li class="footer--social_network-list"><a href="#"><img class="footer--social_network-img" src="img/instagram.svg" alt="Инстаграм" width="32" height="32"></a></li>
+      <li class="footer--social_network-list"><a href="#"><img class="footer--social_network-img" src="img/fb.svg" alt="Фейскбук" width="32" height="32"></a></li>
+      <li class="footer--social_network-list"><a href="#"><img class="footer--social_network-img" src="img/vk.svg" alt="Вконтакте" width="32" height="32"></a></li>
     </ul>
     <ul class="footer--menu">
-      <li class="footer--item"><a href="#" class="footer--item__link"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="13px" viewBox="0 0 15 13" enable-background="new 0 0 15 13" xml:space="preserve">
-         <path fill="#FFFFFF" d="M10.799,0c-1.35,0-2.551,0.65-3.3,1.661C6.75,0.65,5.549,0,4.199,0C1.875,0,0,1.806,0,4.044C0,7.223,7.499,13,7.499,13s7.499-5.777,7.499-8.956C14.998,1.806,13.123,0,10.799,0z"/>
-         </svg>Для поставщиков</a></li>
+      <li class="footer--item"><a href="#" class="footer--item__link">Для поставщиков</a></li>
       <li class="footer--item"><a href="#" class="footer--item__link">О производстве</a></li>
       <li class="footer--item"><a href="#" class="footer--item__link">Наши документы</a></li>
       <li class="footer--item"><a href="#" class="footer--item__link">Экологические стандарты</a></li>
     </ul>
     <div class="footer--made-in">
-      <a href="" class=""><img src="img/logo-htmlacademy.svg" alt="Сливочно-кофейное с кусочками шоколада" class="footer--made-in__logo" width="108px" height="39px"></a>
+      <a href="" class=""><img src="img/logo-htmlacademy.svg" alt="Сливочно-кофейное с кусочками шоколада" class="footer--made-in__logo" width="108" height="39"></a>
       <p class="footer--made-in__paragraph">Сделано в <a href="#" class="html-link">HTML Academy</a> @ 2017</p>
     </div>
   </footer>
