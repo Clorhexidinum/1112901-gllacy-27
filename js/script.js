@@ -7,6 +7,9 @@ var popupName = popup.querySelector("[name=name]");
 var popupEmail = popup.querySelector("[name=email]");
 var popupComment = popup.querySelector("[name=comment]")
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  //do work
+});
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -30,12 +33,5 @@ window.addEventListener("keydown", function (evt) {
       evt.preventDefault();
       popup.classList.remove("popup-show");
     }
-  }
-});
-
-popupForm.addEventListener("submit", function (evt) {
-  if (!popupName.value || !popupEmail.value || !popupComment.value) {
-    evt.preventDefault();
-    console.log("Заполните все поля");
   }
 });

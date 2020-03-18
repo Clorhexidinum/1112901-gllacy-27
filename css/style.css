@@ -199,6 +199,11 @@ body{
   display: flex;
 }
 
+.red{
+  background-color: #d07058;
+  border-radius: 25px;
+}
+
 .novelties{
   font-weight: bold;
 }
@@ -896,7 +901,16 @@ body{
 
 .map-img{
   margin-left: -27px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
+
+.map-map{
+  margin-left: -27px;
+  z-index: 2;
+}
+
 .map--form{
   box-sizing: border-box;
   color: #363636;
@@ -909,6 +923,7 @@ body{
   right: 2px;
   padding: 23px;
   padding-top: 29px;
+  z-index: 5;
 }
 
 .map--form-paragrapf{
@@ -1046,7 +1061,6 @@ body{
 
 .footer .wrapper{
   display: flex;
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -1290,7 +1304,7 @@ body{
 }
 
 .filter--sort__btn{
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   color: #fff;
   box-sizing: border-box;
@@ -1299,7 +1313,7 @@ body{
   border: 0;
   border-radius: 25px;
   padding: 10px 15px;
-  padding-right: 52px;
+  padding-right: 51px;
 }
 
 .filter--sort__btn::after{
