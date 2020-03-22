@@ -70,7 +70,7 @@ body{
   font-weight: 400;
 }
 
-.field:hover{
+.field:hover,{
   outline: 2px solid rgb(154, 154, 154);
 }
 
@@ -430,7 +430,8 @@ body{
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -439,7 +440,9 @@ body{
 
 .cart-item-title{
   width: 220px;
+  padding-top: 5px;
 }
+
 
 .cart-cost{
   margin-right: 5px;
@@ -1035,6 +1038,9 @@ body{
 }
 
 .distribution-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 33px;
   margin-bottom: 5px;
 }
@@ -1119,6 +1125,7 @@ body{
   vertical-align: middle;
   margin-top: 24px;
   padding: 9px 25px;
+  min-width: 210px;
 }
 
 
@@ -1537,7 +1544,7 @@ body{
   background-color: rgba(248, 247, 244,0.2);
   border: 0;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 9px 15px;
   padding-right: 52px;
 }
 
@@ -1678,14 +1685,6 @@ body{
 }
 
 .filter--tastes{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   min-width: 700px;
   padding: 0px;
   margin-top: 15px;
@@ -1722,7 +1721,11 @@ padding-right: 0;
 
 .filter--input,
 .filter--tastes_input{
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 
@@ -1787,16 +1790,21 @@ padding-right: 0;
 }
 
 .filter--label:hover::before,
+.filter--input:checked:focus+label::before,
 .filter--tastes_label:hover::before{
   border-color: #fff;
 }
 
-.filter--input:checked:hover+label::after{
+.filter--input:checked:hover+label::after,
+.filter--input:checked:focus+label::after{
   background-color: #fff;
 }
 
 .filter--tastes_label:hover::before,
-.filter--tastes_input:checked:hover+label::after{
+.filter--tastes_input:checked:hover+label::after,
+.filter--tastes_label:focus::before,
+.filter--tastes_input:checked:focus+label::after,
+.filter--tastes_input:focus+label::before{
   opacity: 1;
 }
 
