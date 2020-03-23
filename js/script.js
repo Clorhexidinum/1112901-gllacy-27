@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //do work
 });
 
-button.addEventListener("click", function (evt) {
+button.addEventListener("click", function(evt) {
   evt.preventDefault();
   popup.classList.add("popup-show");
+  popupForm.classList.add("popup--form-show");
   if (storage) {
     popupName.value = storage;
     password.focus();
@@ -31,29 +32,28 @@ button.addEventListener("click", function (evt) {
   }
 });
 
-popupClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("popup-show");
-  popup.classList.remove("popup-error");
+popupClose.addEventListener("click", function(a) {
+  a.preventDefault(),
+    popup.classList.remove("popup-show"),
+    popupForm.classList.remove("popup-error");
+    popupForm.classList.remove("popup--form-show");
 });
 
-popupCloseOv.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("popup-show");
-  popup.classList.remove("popup-error");
+popupCloseOv.addEventListener("click", function(a) {
+  a.preventDefault(),
+    popup.classList.remove("popup-show"),
+    popupForm.classList.remove("popup-error");
+    popupForm.classList.remove("popup--form-show");
 });
 
-
-popupForm.addEventListener("submit", function (evt) {
-  if (!popupName.value || !popupEmail.value || !popupComment.value) {
-    evt.preventDefault();
-    popup.classList.remove("popup-error");
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("popup-error");
+popupForm.addEventListener("submit", function(a) {
+  if (popupName.value && popupEmail.value && popupComment.value) {
+    isStorageSupport && localStorage.setItem("popupName", login.value);
   } else {
-    if (isStorageSupport) {
-      localStorage.setItem("popupName", login.value);
-    }
+    a.preventDefault(),
+      popupForm.classList.remove("popup-error"),
+      (popupForm.offsetWidth = popup.offsetWidth),
+      popupForm.classList.add("popup-error");
   }
 });
 
